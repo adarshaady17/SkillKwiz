@@ -5,7 +5,7 @@ SkillKwiz is a responsive skill-assessment and recruitment website built with Ne
 ## Technology
 
 - Next.js 15 with the App Router
-- React 19 and TypeScript
+- React 18.3 and TypeScript
 - Tailwind CSS
 - Lucide React icons
 

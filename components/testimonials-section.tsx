@@ -4,8 +4,16 @@ import { useState, useEffect, useRef } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
+interface Testimonial {
+  id: number;
+  name: string;
+  title: string;
+  quote: string;
+  image: string;
+}
+
 // Testimonial data
-const testimonials = [
+const testimonials: Testimonial[] = [
   {
     id: 1,
     name: "Jennifer Cooper",
@@ -50,11 +58,11 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [visibleTestimonials, setVisibleTestimonials] = useState([]);
-  const intervalRef = useRef(null);
+  const [visibleTestimonials, setVisibleTestimonials] = useState<Testimonial[]>([]);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   // Function to get visible testimonials based on active index
-  const updateVisibleTestimonials = (index) => {
+  const updateVisibleTestimonials = (index: number) => {
     const totalTestimonials = testimonials.length;
 
     // Calculate previous, current and next indices with wrapping
@@ -116,7 +124,7 @@ export default function TestimonialsSection() {
     }
   };
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setActiveIndex(index);
 
     // Reset interval timer when manually navigating

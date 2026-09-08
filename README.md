@@ -45,6 +45,17 @@ npm run start
 
 `npm run build` creates the optimized application and `npm run start` serves it locally.
 
+## Deploy on Vercel
+
+Vercel automatically detects this project as a Next.js application.
+
+1. Push this folder to a GitHub repository.
+2. In Vercel, select **Add New → Project** and import that repository.
+3. Confirm the framework preset is **Next.js**.
+4. Keep the build command as `npm run build`; do not set an output directory.
+5. Select **Deploy**.
+
+Vercel will create a preview deployment for changes and a production deployment from your production branch. This repository uses npm and `package-lock.json`; do not add a `pnpm-lock.yaml` file unless you intentionally switch package managers.
 
 ## Environment variables
 
@@ -70,4 +81,9 @@ styles/        Additional styles
 | `npm run build` | Create a production build. |
 | `npm run start` | Run the production build locally. |
 | `npx tsc --noEmit` | Check TypeScript types without generating files. |
-```
+
+## Deployment checks
+
+- Production builds validate TypeScript types.
+- The application uses patched Next.js `15.5.24`.
+- Test the homepage, About, Blog, and Services pages on desktop and mobile before publishing.

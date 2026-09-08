@@ -45,26 +45,6 @@ npm run start
 
 `npm run build` creates the optimized application and `npm run start` serves it locally.
 
-## Deploy on Vercel
-
-Vercel detects this as a Next.js application automatically; no `vercel.json` file is required.
-
-1. Create a GitHub repository and push this project to it.
-2. Sign in at [Vercel](https://vercel.com) with the same GitHub account.
-3. Select **Add New → Project**, then import the repository.
-4. Confirm the detected framework is **Next.js**.
-5. Keep the default build command (`npm run build`) and output directory empty.
-6. Select **Deploy**.
-
-For deployments from your terminal, authenticate with Vercel first and then run:
-
-```bash
-npx vercel
-# Use this only when you are ready to publish the production version:
-npx vercel --prod
-```
-
-Vercel will provide a preview URL for each branch or pull request and a production URL for the default branch.
 
 ## Environment variables
 
@@ -81,13 +61,6 @@ lib/           Shared utilities
 public/        Images, videos, SVGs, PDFs, and favicon source
 styles/        Additional styles
 ```
-
-## Notes for maintainers
-
-- The application uses a fixed navigation bar, so new pages need top padding to keep content clear of it.
-- Homepage carousel image assets live in `public/images/homepage/Carousel/`.
-- The favicon source is `public/images/logo.png` and is configured in `app/layout.tsx`.
-- `next.config.mjs` currently allows builds even when TypeScript errors exist. Resolve TypeScript errors before a production release that needs strict type checks.
 
 ## Useful scripts
 

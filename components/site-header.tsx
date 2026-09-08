@@ -31,9 +31,9 @@ export default function SiteHeader() {
             className="flex items-center gap-2 flex-shrink-0 z-10"
             onClick={() => setIsMenuOpen(false)}
           >
-            <div className="bg-white relative w-32 h-14 sm:w-36 sm:h-16 md:w-40 md:h-[72px] lg:w-44 lg:h-20 flex items-center justify-center">
+            <div className="relative w-32 h-14 sm:w-36 sm:h-16 md:w-40 md:h-[72px] lg:w-44 lg:h-20 flex items-center justify-center">
               <Image
-                src="/skillkwiz-logo.svg"
+                src="/skillkwiz-logo1.svg"
                 alt="SkillKwiz - How much do you know?"
                 fill
                 className="w-full h-full object-contain"

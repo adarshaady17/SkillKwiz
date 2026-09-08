@@ -45,17 +45,6 @@ npm run start
 
 `npm run build` creates the optimized application and `npm run start` serves it locally.
 
-## Deploy on Vercel
-
-Vercel automatically detects this project as a Next.js application.
-
-1. Push this folder to a GitHub repository.
-2. In Vercel, select **Add New → Project** and import that repository.
-3. Confirm the framework preset is **Next.js**.
-4. Keep the build command as `npm run build`; do not set an output directory.
-5. Select **Deploy**.
-
-Vercel will create a preview deployment for changes and a production deployment from your production branch. This repository uses npm and `package-lock.json`; do not add a `pnpm-lock.yaml` file unless you intentionally switch package managers.
 
 ## Environment variables
 
